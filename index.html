@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesForms.css">
+    <title>Se connecter/ register</title>
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">jeff</a>
+            <ul>
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#">A Propos</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">galery</a></li>
+                <li><button class="btn" id="displayForm">se connecter</button></li>
+            </ul>
+        </nav>
+        <div class="blog"></div>
+        <section>
+            <div class="blob"></div>
+            <div class="sec-container">
+                <div class="form-wrapper">
+                    <div class="card">
+                        <div class="card-header">
+                            <div id="forLogin" class="form-header active">se connecter</div>
+                            <div id="forRegister" class="form-header">s'inscrire</div>
+                        </div>
+                        <div class="card-body" id="formContainer">
+                            <form id="loginForm">
+                                <input type="email" class="form-control" required placeholder="@utilisateur"> 
+                                <input type="password" class="form-control" required placeholder="@mot de passe">
+                                <button class="formButton">connexion</button>
+                            </form>
+                            <form id="registerForm" class="toggleForm">
+                                <input type="email" class="form-control" required placeholder="@utilisateur">
+                                <input type="password" class="form-control" required placeholder="@mot de passe">
+                                <input type="password" class="form-control" required placeholder="@confirmer mot de passe">
+                                <button class="formButton">inscription</button>
+                            </form>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="conreg.js"></script>
+
+</body>
+</html>

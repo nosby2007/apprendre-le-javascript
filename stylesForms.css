@@ -1,0 +1,203 @@
+*,
+*::before,
+::after{
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.4), transparent), url(/assets/woman-g9c78a6b3c_1280.jpg);
+    z-index: 1;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+    text-decoration: none;
+}
+nav .logo{
+    width: 120px;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-style: oblic;
+    font-weight: bold;
+    text-decoration: none;
+    color: #94f7e6;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    text-align: right;
+    justify-content: flex-end;
+    list-style-type: none;
+    flex: 1;
+    padding-right: 40px;
+}
+nav ul li{
+    margin-right: 10px;
+}
+
+nav ul li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #94f7e6;
+
+}
+button.btn{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 2px;
+    background-color: transparent;
+    color: #94f7e6;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: border-color .2s;
+
+}
+button.btn:hover{
+    border-color: #94f7e6;
+    background-image: url(/assets/woman-g9c78a6b3c_1280.jpg);
+    background-size:cover ;
+
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+}
+.form-wrapper .card{
+    width: 360px;
+    padding: 20px;
+    background-color: rgba(76, 18, 18, 0.35);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+    z-index: 1;
+}
+.blob{
+    position: absolute;
+    background: linear-gradient(red, purple);
+    height: 500px;
+    width: 500px;
+    border-radius: 30% 70% 70% 30% / 30% 28% 72% 70%;
+    transform: translate(250px, 80%) rotate(60deg);
+    animation: blob 16s infinite alternate;
+    transition: 1s cubic-bezier(0.215, 0.16, 0.355, 1);
+}
+.blob:hover{
+    filter: blur(30px);
+    height: 560px;
+    width: 560px;
+    box-shadow: inset 100px 100px white, inset 200px 200px purple, inset 300px 300px red;
+   
+}
+.card.show{
+    visibility: visible;
+    opacity: 1;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 20px 0;
+    font-size: 1.1rem;
+    color: #94f7e6;
+    box-shadow: 2px 3px 8px #d3f7ff71;
+    border-radius: 50px;
+
+}
+.card-header .form-header{
+    flex: 50%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    user-select: none;
+    cursor: pointer;
+}
+.card-header .form-header.active{
+    box-shadow: inset 1px 1px 2px rgb(19 210 177/ 55%), inset -1px 1px 2px rgb(19 210 177/ 55%), inset -1px -1px 2px rgb(19 210 177/ 55%), inset 1px 1px 2px rgb(19 210 177/ 55%), inset 1px -1px 2px rgb(19 210 177/ 55%);
+    border-color: #94f7e6;
+    transition: border-color .3s, box-shadox .3s;
+}
+
+.card-body{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 40px 0;
+    text-align: center;
+}
+
+form{
+    flex: 0 0 100%;
+}
+
+
+.toggleForm{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility .3s;
+}
+
+.form-control{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(134 255 249 /65%);
+    background: none;
+    outline: none;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    color: #fbfdfc;
+}
+.form-control::placeholder{
+    color:rgb(134 255 249 /65%); ;
+}
+
+
+.formButton{
+    border: 1px solid transparent;
+    padding: 1rem 3rem;
+    background-color: #94f7e6;
+    border-radius: 50px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    transition: transform .3s, box-shadow .3s;
+}
+.formButton:hover{
+    box-shadow: 3px 5px 45px #94f7e6;
+    transform: translateY(-5px);
+}
+
+
+
+@keyframes blob{
+    5%{
+        transform: translate(250px, 80%) rotate(60deg);
+    }
+    40%{
+        transform: translate(-60%, -50%) rotate(30deg);
+        border-radius: 30% 70% 23% 77% / 8% 30% 70% 92% ;
+    }
+    75%{
+        transform: translate(0%, -100%) rotate(-120deg);
+        border-radius: 42% 58% 45% 55% / 38% 55% 45% 62% ;
+    }
+
+}
